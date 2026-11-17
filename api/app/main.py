@@ -339,6 +339,11 @@ def create_app():
             conn.execute(audit.insert().values(ts=datetime.now(timezone.utc), actor=actor["sub"], accion="ack_alert", detalle=str(alert_id)))
         return {"id": alert_id, "estado": "atendida"}
 
+    front = os.environ.get("FRONTEND_DIR")
+    if front and os.path.isdir(front):
+        from fastapi.staticfiles import StaticFiles
+        app.mount("/", StaticFiles(directory=front, html=True), name="front")
+
     return app
 
 

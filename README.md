@@ -340,6 +340,18 @@ Vercel sirve funciones serverless con un límite de ~250 MB sin comprimir y sin 
 
 Vite incrusta `VITE_API_BASE` en el build: si cambias la URL del backend, hay que volver a desplegar el front.
 
+### Opción de un solo servicio (sin static site ni permisos de app)
+
+`deploy/Dockerfile.all` construye el front y lo sirve desde FastAPI en la misma URL. Así solo hay un servicio que crear, sin `VITE_API_BASE` ni CORS:
+
+- Render → **New → Web Service → Public Git repository**
+- URL: `https://github.com/joshuaxpro19/prototipo-MYPE-s`
+- Dockerfile Path: `deploy/Dockerfile.all` · Docker Context: `.`
+- Plan **Free** · Health Check Path `/health`
+- Variables: `DEMO_MODE=1`, `JWT_SECRET` (generate), `ADMIN_EMAIL=propietario@mype.pe`, `ADMIN_PASSWORD`, `ADMIN_TOTP_SECRET`, `ALERT_THRESHOLD=0.5`
+
+El contenedor quedó probado en local con `scripts/deploy_all_smoke.sh`: la raíz devuelve el HTML del panel, `/health` responde 200 y el login MFA funciona.
+
 ### Cómo entrar cuando está en la nube
 
 No hay terminal en Render, así que el código MFA sale de dos formas:
