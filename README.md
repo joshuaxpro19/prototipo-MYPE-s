@@ -338,7 +338,7 @@ Vercel sirve funciones serverless con un límite de ~250 MB sin comprimir y sin 
 3. Environment Variable: `VITE_API_BASE = https://TU-SERVICIO.onrender.com` (sin barra final).
 4. Deploy. La URL queda tipo `https://prototipo-mype.vercel.app`.
 
-Vite incrusta `VITE_API_BASE` en el build: si cambias la URL del backend, hay que volver a desplegar el front.
+Vite incrusta `VITE_API_BASE` en el build: si cambias la URL del backend, hay que volver a desplegar el front. En el blueprint la URL va literal (`https://prototipo-mype-api.onrender.com`) para que no dependa de la resolucion `fromService`; si renombras el servicio API, actualizala en `render.yaml`.
 
 ### Opción de un solo servicio (sin static site ni permisos de app)
 
