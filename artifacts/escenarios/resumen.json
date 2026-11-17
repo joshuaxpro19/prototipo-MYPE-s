@@ -1,0 +1,50 @@
+{
+  "deriva": {
+    "inicio": "2026-11-01",
+    "factor": 1.35
+  },
+  "escenarios": [
+    {
+      "id": "h_20261031",
+      "etiqueta": "Sin datos nuevos",
+      "nota": "entrenado hasta el 31 de octubre, sin ver la subida",
+      "hasta": "2026-10-31",
+      "semanas_train": 47,
+      "filas_train": 10528,
+      "filas_test": 448,
+      "mape": 27.1,
+      "rmse": 17.309,
+      "r2": 0.66,
+      "f1": 0.936,
+      "auc": 0.991
+    },
+    {
+      "id": "h_20261107",
+      "etiqueta": "+1 semana",
+      "nota": "un reentrenamiento con la primera semana del cambio",
+      "hasta": "2026-11-07",
+      "semanas_train": 48,
+      "filas_train": 10752,
+      "filas_test": 448,
+      "mape": 27.99,
+      "rmse": 17.756,
+      "r2": 0.643,
+      "f1": 0.931,
+      "auc": 0.991
+    },
+    {
+      "id": "h_20261114",
+      "etiqueta": "+2 semanas",
+      "nota": "dos semanas de datos nuevos antes de predecir",
+      "hasta": "2026-11-14",
+      "semanas_train": 49,
+      "filas_train": 10976,
+      "filas_test": 448,
+      "mape": 14.32,
+      "rmse": 7.728,
+      "r2": 0.932,
+      "f1": 0.949,
+      "auc": 0.993
+    }
+  ]
+}

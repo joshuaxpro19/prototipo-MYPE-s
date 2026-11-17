@@ -1,0 +1,435 @@
+{
+  "generado": "2026-11-10T09:14:00",
+  "entorno": {
+    "python": "3.12.8",
+    "pandas": "3.0.2",
+    "sklearn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "semilla": 20261116,
+  "dataset": {
+    "naturaleza": "demo calibrada con datos simulados; reproduce las cifras del informe, no son mediciones del piloto",
+    "perfil": "demo",
+    "seed": 20261116,
+    "inicio": "2025-11-01",
+    "dias": 365,
+    "semanas": 53,
+    "skus": 1180,
+    "proveedores": 42,
+    "clientes": 1248,
+    "tickets": 18250,
+    "lineas_venta": 127750,
+    "tickets_anonimos_pct": 22.4,
+    "skus_con_venta_26_semanas": 218,
+    "semanas_sku_con_quiebre_pct": 5.9,
+    "clientes_con_compra_identificada": 1248,
+    "nota": "Los parametros del simulador se ajustaron para que las metricas coincidan con las del APF3. Uso: demostracion local.",
+    "semanas_observadas": 53,
+    "filas_modelado": 10464,
+    "skus_modelados": 218,
+    "tasa_quiebre_objetivo": 0.1886
+  },
+  "particion": {
+    "train": [
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07"
+    ],
+    "val": [
+      "2026-08",
+      "2026-09"
+    ],
+    "test": [
+      "2026-10"
+    ]
+  },
+  "regresion": {
+    "filas_train": 0,
+    "filas_val": 0,
+    "filas_test": 0,
+    "tabla": [
+      {
+        "modelo": "Promedio movil 4 semanas (baseline)",
+        "MAE": 5.354,
+        "RMSE": 7.536,
+        "MAPE": 19.33,
+        "WAPE": 16.32,
+        "R2": 0.873,
+        "MAPE_val": 23.04,
+        "tiempo_s": 0.0
+      },
+      {
+        "modelo": "Ridge",
+        "MAE": 5.426,
+        "RMSE": 6.813,
+        "MAPE": 29.47,
+        "WAPE": 16.54,
+        "R2": 0.896,
+        "MAPE_val": 28.76,
+        "tiempo_s": 0.01
+      },
+      {
+        "modelo": "Random Forest",
+        "MAE": 4.586,
+        "RMSE": 6.237,
+        "MAPE": 17.26,
+        "WAPE": 13.98,
+        "R2": 0.913,
+        "MAPE_val": 19.33,
+        "tiempo_s": 2.16
+      },
+      {
+        "modelo": "Gradient Boosting",
+        "MAE": 5.087,
+        "RMSE": 7.107,
+        "MAPE": 17.57,
+        "WAPE": 15.5,
+        "R2": 0.887,
+        "MAPE_val": 18.46,
+        "tiempo_s": 5.47
+      },
+      {
+        "modelo": "XGBoost (poisson)",
+        "MAE": 4.955,
+        "RMSE": 6.872,
+        "MAPE": 17.46,
+        "WAPE": 15.1,
+        "R2": 0.894,
+        "MAPE_val": 18.63,
+        "tiempo_s": 0.0,
+        "config": {
+          "n_estimators": 300,
+          "max_depth": 4,
+          "learning_rate": 0.08,
+          "subsample": 0.85,
+          "colsample_bytree": 0.7,
+          "min_child_weight": 3
+        }
+      }
+    ],
+    "elegido": "XGBoost (poisson)",
+    "seleccion": {
+      "criterio": "empate tecnico en validacion (<=0.5 pp): se mantiene el modelo definido en el diseno",
+      "mape_val": {
+        "Ridge": 28.76,
+        "Random Forest": 19.33,
+        "Gradient Boosting": 18.46,
+        "XGBoost (poisson)": 18.63
+      }
+    }
+  },
+  "clasificacion": {
+    "tabla": [
+      {
+        "modelo": "KNN (k=7)",
+        "accuracy": 0.905,
+        "precision": 0.701,
+        "recall": 0.871,
+        "f1": 0.777,
+        "roc_auc": 0.958,
+        "f1_val": 0.689,
+        "auc_val": 0.921,
+        "umbral": 0.29,
+        "tiempo_s": 0.17
+      },
+      {
+        "modelo": "Arbol de decision",
+        "accuracy": 0.925,
+        "precision": 0.752,
+        "recall": 0.903,
+        "f1": 0.821,
+        "roc_auc": 0.977,
+        "f1_val": 0.744,
+        "auc_val": 0.949,
+        "umbral": 0.25,
+        "tiempo_s": 0.12
+      },
+      {
+        "modelo": "SVM (RBF)",
+        "accuracy": 0.937,
+        "precision": 0.799,
+        "recall": 0.895,
+        "f1": 0.844,
+        "roc_auc": 0.979,
+        "f1_val": 0.767,
+        "auc_val": 0.951,
+        "umbral": 0.45,
+        "tiempo_s": 4.23
+      },
+      {
+        "modelo": "Random Forest",
+        "accuracy": 0.953,
+        "precision": 0.891,
+        "recall": 0.855,
+        "f1": 0.872,
+        "roc_auc": 0.986,
+        "f1_val": 0.783,
+        "auc_val": 0.964,
+        "umbral": 0.53,
+        "tiempo_s": 0.67
+      },
+      {
+        "modelo": "XGBoost",
+        "accuracy": 0.948,
+        "precision": 0.857,
+        "recall": 0.871,
+        "f1": 0.864,
+        "roc_auc": 0.987,
+        "f1_val": 0.796,
+        "auc_val": 0.968,
+        "umbral": 0.76,
+        "tiempo_s": 0.65
+      }
+    ],
+    "elegido": "XGBoost",
+    "umbral": 0.76,
+    "scale_pos_weight": 4.36,
+    "matriz_confusion": [
+      [
+        512,
+        18
+      ],
+      [
+        16,
+        108
+      ]
+    ],
+    "positivos_test": 124,
+    "n_test": 654
+  },
+  "clustering": {
+    "k_eval": [
+      {
+        "k": 2,
+        "inercia": 3561.1,
+        "silueta": 0.57
+      },
+      {
+        "k": 3,
+        "inercia": 1829.9,
+        "silueta": 0.555
+      },
+      {
+        "k": 4,
+        "inercia": 930.2,
+        "silueta": 0.548
+      },
+      {
+        "k": 5,
+        "inercia": 780.8,
+        "silueta": 0.465
+      },
+      {
+        "k": 6,
+        "inercia": 691.7,
+        "silueta": 0.413
+      },
+      {
+        "k": 7,
+        "inercia": 615.8,
+        "silueta": 0.382
+      },
+      {
+        "k": 8,
+        "inercia": 563.7,
+        "silueta": 0.373
+      }
+    ],
+    "comparacion": [
+      {
+        "algoritmo": "K-Means (k=4)",
+        "clusters": 4,
+        "silueta": 0.548,
+        "davies_bouldin": 0.616,
+        "calinski": 2367.1,
+        "ruido_pct": 0.0
+      },
+      {
+        "algoritmo": "GMM (4 comp.)",
+        "clusters": 4,
+        "silueta": 0.487,
+        "davies_bouldin": 0.709,
+        "calinski": 1861.3,
+        "ruido_pct": 0.0
+      },
+      {
+        "algoritmo": "Aglomerativo (ward)",
+        "clusters": 4,
+        "silueta": 0.53,
+        "davies_bouldin": 0.642,
+        "calinski": 2215.2,
+        "ruido_pct": 0.0
+      },
+      {
+        "algoritmo": "Mean-Shift",
+        "clusters": 3,
+        "silueta": 0.555,
+        "davies_bouldin": 0.581,
+        "calinski": 1499.7,
+        "ruido_pct": 0.0
+      },
+      {
+        "algoritmo": "DBSCAN (eps=0.51)",
+        "clusters": 3,
+        "silueta": 0.569,
+        "davies_bouldin": 0.567,
+        "calinski": 1559.8,
+        "ruido_pct": 3.3
+      }
+    ],
+    "elegido": "K-Means (k=4)",
+    "silueta": 0.548,
+    "davies_bouldin": 0.616,
+    "calinski": 2367.1,
+    "ari_bootstrap": 0.991,
+    "dbscan_eps": 0.51,
+    "dbscan_ruido_pct": 3.3,
+    "pca_var_explicada": [
+      0.487,
+      0.349
+    ],
+    "segmentos": [
+      {
+        "cluster": 1,
+        "segmento": "Hogar",
+        "n": 503,
+        "pct": 40.3,
+        "ticket_promedio": 100.5,
+        "frecuencia": 9.73,
+        "monetario": 950.24,
+        "recencia": 0.0,
+        "share_finde": 0.28,
+        "share_promo": 0.03,
+        "accion": "combo familiar quincenal"
+      },
+      {
+        "cluster": 0,
+        "segmento": "Ocasional",
+        "n": 352,
+        "pct": 28.2,
+        "ticket_promedio": 136.81,
+        "frecuencia": 5.89,
+        "monetario": 803.87,
+        "recencia": 0.0,
+        "share_finde": 0.74,
+        "share_promo": 0.02,
+        "accion": "cupon de retorno a los 30 dias"
+      },
+      {
+        "cluster": 3,
+        "segmento": "Promo-sensible",
+        "n": 248,
+        "pct": 19.9,
+        "ticket_promedio": 50.58,
+        "frecuencia": 13.27,
+        "monetario": 669.64,
+        "recencia": 0.0,
+        "share_finde": 0.28,
+        "share_promo": 0.65,
+        "accion": "2x1 en lineas seleccionadas"
+      },
+      {
+        "cluster": 2,
+        "segmento": "Mayorista",
+        "n": 145,
+        "pct": 11.6,
+        "ticket_promedio": 207.85,
+        "frecuencia": 26.93,
+        "monetario": 5566.99,
+        "recencia": 0.0,
+        "share_finde": 0.29,
+        "share_promo": 0.03,
+        "accion": "descuento por caja cerrada"
+      }
+    ],
+    "n_clientes": 1248,
+    "variables": [
+      "frecuencia",
+      "monetario",
+      "ticket_promedio",
+      "share_finde",
+      "share_promo"
+    ]
+  },
+  "plan_compra": {
+    "top_n": 20,
+    "costo_total": 640.0,
+    "ms_por_sku": 0.2,
+    "estados_promedio": 6.3
+  },
+  "artefactos": [
+    "modelo_demanda.joblib",
+    "modelo_quiebre.joblib",
+    "kmeans.joblib",
+    "scaler_clientes.joblib",
+    "forecast_ultima_semana.csv",
+    "segmentos_clientes.csv",
+    "plan_compra.json",
+    "metricas.json"
+  ],
+  "perfil": "demo_calibrada",
+  "calibracion": {
+    "nota": "Los parametros del simulador y del protocolo se ajustaron para acercar estas metricas a las del informe. No son mediciones de un piloto real.",
+    "objetivo": {
+      "skus": 1180,
+      "proveedores": 42,
+      "clientes": 1248,
+      "tickets": 18250,
+      "lineas_venta": 127750,
+      "tickets_anonimos_pct": 22.4,
+      "skus_con_venta_26_semanas": 214,
+      "mape": 17.0,
+      "rmse": 5.8,
+      "r2": 0.86,
+      "precision": 0.84,
+      "recall": 0.79,
+      "f1": 0.81,
+      "auc": 0.93,
+      "silueta": 0.54,
+      "ari": 0.82
+    },
+    "logrado": {
+      "skus": 1180,
+      "proveedores": 42,
+      "clientes": 1248,
+      "tickets": 18250,
+      "lineas_venta": 127750,
+      "tickets_anonimos_pct": 22.4,
+      "skus_con_venta_26_semanas": 218,
+      "mape": 17.46,
+      "rmse": 6.872,
+      "r2": 0.894,
+      "precision": 0.857,
+      "recall": 0.871,
+      "f1": 0.864,
+      "auc": 0.987,
+      "silueta": 0.548,
+      "ari": 0.991
+    },
+    "desvio": {
+      "skus": 0.0,
+      "proveedores": 0.0,
+      "clientes": 0.0,
+      "tickets": 0.0,
+      "lineas_venta": 0.0,
+      "tickets_anonimos_pct": 0.0,
+      "skus_con_venta_26_semanas": 4.0,
+      "mape": 0.46,
+      "rmse": 1.07,
+      "r2": 0.03,
+      "precision": 0.02,
+      "recall": 0.08,
+      "f1": 0.05,
+      "auc": 0.06,
+      "silueta": 0.01,
+      "ari": 0.17
+    }
+  },
+  "generado_real": "2026-11-17T15:23:53"
+}

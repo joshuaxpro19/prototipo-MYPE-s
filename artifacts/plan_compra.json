@@ -1,0 +1,682 @@
+[
+  {
+    "sku_id": "SKU-0870",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 124.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 124.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 124.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 124.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 5,
+    "nombre": "Harina Blanca Flor 500 g Granel",
+    "categoria": "abarrotes",
+    "lead_time_dias": 7
+  },
+  {
+    "sku_id": "SKU-0156",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 85.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 85.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 85.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 85.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 5,
+    "nombre": "Arroz Faraón 1 kg Económico",
+    "categoria": "abarrotes",
+    "lead_time_dias": 2
+  },
+  {
+    "sku_id": "SKU-0473",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 76.5,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 76.5,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 76.5,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 76.5,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 4,
+    "nombre": "Detergente Ace 2 kg Oferta",
+    "categoria": "limpieza",
+    "lead_time_dias": 5
+  },
+  {
+    "sku_id": "SKU-0667",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 82.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 82.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 82.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 82.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 6,
+    "nombre": "Fideo Nicolini 500 g Premium",
+    "categoria": "abarrotes",
+    "lead_time_dias": 2
+  },
+  {
+    "sku_id": "SKU-1019",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 76.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 76.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 76.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 76.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 7,
+    "nombre": "Galleta Soda Field paquete 6 Familiar",
+    "categoria": "abarrotes",
+    "lead_time_dias": 4
+  },
+  {
+    "sku_id": "SKU-0737",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 72.7,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 72.7,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 72.7,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 72.7,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 6,
+    "nombre": "Agua mineral Cielo 2.5 L Rinde más",
+    "categoria": "bebidas",
+    "lead_time_dias": 4
+  },
+  {
+    "sku_id": "SKU-0053",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 69.8,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 69.8,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 69.8,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 69.8,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 6,
+    "nombre": "Leche evaporada Gloria 400 g Edición especial",
+    "categoria": "lacteos",
+    "lead_time_dias": 6
+  },
+  {
+    "sku_id": "SKU-1151",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 68.9,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 68.9,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 68.9,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 68.9,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 5,
+    "nombre": "Conserva Arica 400 g Familiar",
+    "categoria": "abarrotes",
+    "lead_time_dias": 5
+  },
+  {
+    "sku_id": "SKU-0546",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 67.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 67.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 67.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 67.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 5,
+    "nombre": "Agua mineral San Mateo 625 ml Oferta",
+    "categoria": "bebidas",
+    "lead_time_dias": 5
+  },
+  {
+    "sku_id": "SKU-0781",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 65.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 65.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 65.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 65.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 12,
+    "nombre": "Yogurt Laive 1 kg Familiar",
+    "categoria": "lacteos",
+    "lead_time_dias": 3
+  },
+  {
+    "sku_id": "SKU-0649",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 65.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 65.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 65.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 65.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 7,
+    "nombre": "Yogurt Gloria 1 kg Familiar",
+    "categoria": "lacteos",
+    "lead_time_dias": 5
+  },
+  {
+    "sku_id": "SKU-0256",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 64.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 64.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 64.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 64.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 4,
+    "nombre": "Detergente Ariel 2 kg Pack x2",
+    "categoria": "limpieza",
+    "lead_time_dias": 6
+  },
+  {
+    "sku_id": "SKU-0132",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 60.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 60.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 60.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 60.0,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 11,
+    "nombre": "Leche evaporada Gloria tarro 395 g Económico",
+    "categoria": "lacteos",
+    "lead_time_dias": 3
+  },
+  {
+    "sku_id": "SKU-0646",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 62.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 62.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 62.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 62.3,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 6,
+    "nombre": "Fideo Don Vittorio paquete Oferta",
+    "categoria": "abarrotes",
+    "lead_time_dias": 3
+  },
+  {
+    "sku_id": "SKU-0635",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 56.6,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 56.6,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 56.6,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 56.6,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 5,
+    "nombre": "Fideo Don Vittorio 250 g Exportación",
+    "categoria": "abarrotes",
+    "lead_time_dias": 5
+  },
+  {
+    "sku_id": "SKU-0085",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 58.7,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 58.7,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 58.7,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 58.7,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 5,
+    "nombre": "Arroz Paisana 1 kg Edición especial",
+    "categoria": "abarrotes",
+    "lead_time_dias": 7
+  },
+  {
+    "sku_id": "SKU-0112",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 57.1,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 57.1,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 57.1,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 57.1,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 7,
+    "nombre": "Gaseosa Inca Kola 3 L Económico",
+    "categoria": "bebidas",
+    "lead_time_dias": 4
+  },
+  {
+    "sku_id": "SKU-0941",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 67.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 67.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 67.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 67.4,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 7,
+    "nombre": "Café Altomayo 100 g Familiar",
+    "categoria": "abarrotes",
+    "lead_time_dias": 7
+  },
+  {
+    "sku_id": "SKU-0186",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 55.5,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 55.5,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 55.5,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 55.5,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 7,
+    "nombre": "Leche evaporada Laive 400 g Premium",
+    "categoria": "lacteos",
+    "lead_time_dias": 3
+  },
+  {
+    "sku_id": "SKU-0596",
+    "costo": 32.0,
+    "plan": [
+      {
+        "semana": 1,
+        "pedido": 54.1,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 2,
+        "pedido": 54.1,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 3,
+        "pedido": 54.1,
+        "stock_final": 0.0,
+        "costo": 8.0
+      },
+      {
+        "semana": 4,
+        "pedido": 54.1,
+        "stock_final": 0.0,
+        "costo": 8.0
+      }
+    ],
+    "explorados": 7,
+    "nombre": "Fideo Don Vittorio 500 g Combo",
+    "categoria": "abarrotes",
+    "lead_time_dias": 2
+  }
+]
