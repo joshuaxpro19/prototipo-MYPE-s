@@ -65,9 +65,9 @@ class Cache:
 def create_app():
     art_dir = os.environ.get("ARTIFACTS_DIR", os.path.join(ROOT, "artifacts"))
     secret = os.environ.get("JWT_SECRET", "dev-secret-cambiar")
-    seed_email = os.environ.get("ADMIN_EMAIL", "propietario@mype.pe")
-    seed_password = os.environ.get("ADMIN_PASSWORD", "Piloto2026!")
-    seed_totp = os.environ.get("ADMIN_TOTP_SECRET", "JBSWY3DPEHPK3PXP")
+    seed_email = (os.environ.get("ADMIN_EMAIL") or "propietario@mype.pe").strip()
+    seed_password = (os.environ.get("ADMIN_PASSWORD") or "Piloto2026!").strip()
+    seed_totp = (os.environ.get("ADMIN_TOTP_SECRET") or "JBSWY3DPEHPK3PXP").strip()
     umbral_alerta = float(os.environ.get("ALERT_THRESHOLD", "0.5"))
 
     state = {"forecast": None, "metrics": None, "segments": None, "plan": None}

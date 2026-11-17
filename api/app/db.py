@@ -1,10 +1,10 @@
 import os
 
 from sqlalchemy import (Column, DateTime, Float, Integer, MetaData, String, Table,
-                        create_engine, select, text)
+                        create_engine, select, text, update)
 from sqlalchemy.dialects.sqlite import insert as sqlite_insert
 
-from .security import hash_password
+from .security import hash_password, verify_password
 
 metadata = MetaData()
 
@@ -59,8 +59,8 @@ def init_db(engine, seed_email, seed_password, seed_totp):
             except Exception:
                 pass
     with engine.begin() as conn:
-        exists = conn.execute(select(users.c.id).where(users.c.email == seed_email)).first()
-        if not exists:
+        row = conn.execute(select(users).where(users.c.email == seed_email)).mappings().first()
+        if not row:
             conn.execute(users.insert().values(
                 email=seed_email,
                 password_hash=hash_password(seed_password),
@@ -68,3 +68,7 @@ def init_db(engine, seed_email, seed_password, seed_totp):
                 role="propietario",
                 activo=1,
             ))
+        elif (not verify_password(seed_password, row["password_hash"])
+              or row["totp_secret"] != seed_totp or not row["activo"]):
+            conn.execute(update(users).where(users.c.email == seed_email).values(
+                password_hash=hash_password(seed_password), totp_secret=seed_totp, activo=1))
