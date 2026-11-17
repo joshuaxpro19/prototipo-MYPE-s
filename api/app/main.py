@@ -114,7 +114,9 @@ def create_app():
     @app.get("/health")
     def health():
         mt, ok = fresh(os.path.join(art_dir, "metricas.json"))
-        return {"status": "ok", "modelos": ok, "cache": bool(cache.client), "hora": datetime.now(timezone.utc).isoformat()}
+        commit = (os.environ.get("RENDER_GIT_COMMIT") or os.environ.get("GIT_COMMIT") or "local")[:7]
+        return {"status": "ok", "modelos": ok, "cache": bool(cache.client),
+                "commit": commit, "hora": datetime.now(timezone.utc).isoformat()}
 
     @app.get("/api/v1/auth/demo-code")
     def demo_code():
