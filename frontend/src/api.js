@@ -1,5 +1,12 @@
-﻿const RAW = import.meta.env.VITE_API_BASE || "";
-const BASE = RAW && !/^https?:\/\//i.test(RAW) ? "https://" + RAW.replace(/\/$/, "") : RAW.replace(/\/$/, "");
+﻿function normalizar(valor) {
+  if (!valor) return "";
+  const v = String(valor).trim().replace(/\/$/, "");
+  if (/^https?:\/\//i.test(v)) return v;
+  const host = v.includes(".") ? v : v + ".onrender.com";
+  return "https://" + host;
+}
+
+const BASE = normalizar(import.meta.env.VITE_API_BASE);
 
 export async function api(path, { token, method = "GET", body } = {}) {
   const res = await fetch(BASE + path, {
@@ -11,7 +18,12 @@ export async function api(path, { token, method = "GET", body } = {}) {
     body: body ? JSON.stringify(body) : undefined,
   });
   const text = await res.text();
-  const data = text ? JSON.parse(text) : null;
+  let data = null;
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    throw new Error("El API no respondió JSON (revisa VITE_API_BASE)");
+  }
   if (!res.ok) throw new Error((data && data.detail) || "Error " + res.status);
   return data;
 }
