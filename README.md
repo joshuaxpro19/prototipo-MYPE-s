@@ -361,6 +361,14 @@ No hay terminal en Render, así que el código MFA sale de dos formas:
 
 Si cambias `ADMIN_PASSWORD` en Render, el formulario no lo va a precargar: escribe la nueva.
 
+### Verificar el despliegue
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\check_cloud.ps1 -Api https://prototipo-mype-api.onrender.com
+```
+
+Comprueba health (con reintentos por el cold start), código demo, login, dashboard, modelos, pronóstico, segmentos, semanas y escenarios. Si algo falla, dice cuál variable revisar.
+
 ### Paso 3: antes de la demo
 
 El plan gratis duerme el backend. Despiértalo un minuto antes:
