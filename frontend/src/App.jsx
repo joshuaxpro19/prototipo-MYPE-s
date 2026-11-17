@@ -138,7 +138,7 @@ function Mapa({ puntos, segmentos }) {
 
 function Login({ onToken }) {
   const [email, setEmail] = useState("propietario@mype.pe");
-  const [pass, setPass] = useState("Piloto2026!");
+  const [pass, setPass] = useState("");
   const [otp, setOtp] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
@@ -179,7 +179,7 @@ function Login({ onToken }) {
         <label>Correo del propietario</label>
         <input value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="username" />
         <label>Contraseña</label>
-        <input type="password" value={pass} onChange={(e) => setPass(e.target.value)} autoComplete="current-password" />
+        <input type="password" value={pass} onChange={(e) => setPass(e.target.value)} autoComplete="current-password" placeholder="Tu contraseña" />
         <label>Código de verificación (MFA)</label>
         <div className="mfa-row">
           <input value={otp} onChange={(e) => setOtp(e.target.value)} maxLength={6} inputMode="numeric" placeholder="000000" />
